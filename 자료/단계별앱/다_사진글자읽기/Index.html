@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사진 속 글자 읽기</title>
+<style>
+:root{--ink:#172b43;--muted:#4d5b6b;--paper:#f4f2e9;--brand:#075bca;--brand-tint:#e6f0fc;--ok:#13744f;--ok-tint:#e3f4ea;--bad:#b3261e;--bad-tint:#fdeceb;--warn:#8a5300;--warn-tint:#fff4d6;--gold:#ffcd29;--tap:48px}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-text-size-adjust:100%}
+[hidden]{display:none!important}
+.top{background:var(--gold);border-bottom:2px solid var(--ink);padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top));display:flex;align-items:center;gap:10px}
+.top h1{font-size:19px;margin:0;flex:1;letter-spacing:-.5px}
+.bricks{display:flex;gap:4px}.bricks i{width:18px;height:12px;border:2px solid var(--ink);border-radius:3px;background:#e74335}.bricks i+i{background:var(--brand)}
+main{max-width:640px;margin:0 auto;padding:14px 16px calc(40px + env(safe-area-inset-bottom))}
+.card{background:#fff;border:2px solid var(--ink);border-radius:12px;box-shadow:0 4px 0 var(--ink);padding:16px;margin:0 0 18px}
+.card h2{font-size:16px;margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.num{display:inline-grid;place-items:center;width:26px;height:26px;border:2px solid var(--ink);border-radius:6px;background:var(--gold);font-size:14px}
+.row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.row .wide{grid-column:1/-1}
+label{display:block;font-size:14px;font-weight:700;margin:0 0 4px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:2px solid #8793a0;border-radius:8px;padding:10px;min-height:var(--tap)}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+textarea{min-height:160px;resize:vertical}
+.question{background:var(--brand-tint);border-left:5px solid var(--brand);border-radius:0 8px 8px 0;padding:10px 12px;margin:10px 0 0;white-space:pre-wrap}
+.hint{font-size:14px;color:var(--muted);margin:6px 0 0}
+.count{font-size:13px;color:var(--muted);text-align:right;margin-top:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:var(--tap);padding:10px 16px;font:inherit;font-weight:700;font-size:16px;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:10px;box-shadow:0 4px 0 var(--ink);cursor:pointer;touch-action:manipulation}
+.btn:active{transform:translateY(4px);box-shadow:none}
+.btn[disabled]{opacity:.55;cursor:not-allowed}
+.btn.primary{background:var(--brand);color:#fff}
+.btn.go{background:var(--ok);color:#fff}
+.btn.block{display:flex;width:100%}
+.btn.small{min-height:40px;font-size:14px;padding:6px 12px;box-shadow:0 3px 0 var(--ink)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.msg{border-radius:8px;padding:10px 12px;margin:10px 0 0;font-size:15px;white-space:pre-wrap}
+.msg.bad{background:var(--bad-tint);color:var(--bad);border:2px solid var(--bad)}
+.msg.warn{background:var(--warn-tint);color:var(--warn);border:2px solid var(--warn)}
+.msg.ok{background:var(--ok-tint);color:var(--ok);border:2px solid var(--ok)}
+.done{text-align:center}
+.done .big{font-size:26px;font-weight:800;color:var(--ok);margin:4px 0}
+.linkbtn{background:none;border:0;color:var(--brand);font:inherit;font-size:14px;text-decoration:underline;padding:8px 0;min-height:40px;cursor:pointer}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.thumbs figure{margin:0;border:2px solid var(--ink);border-radius:8px;overflow:hidden;background:#eef1f4;position:relative}
+.thumbs img{display:block;width:100%;height:96px;object-fit:cover}
+.thumbs figcaption{font-size:12px;padding:3px 6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.thumbs .x{position:absolute;top:4px;right:4px;width:32px;height:32px;border-radius:50%;border:2px solid var(--ink);background:#fff;font-weight:800;cursor:pointer}
+.busy{display:inline-block;width:16px;height:16px;border:3px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.vh{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}
+.thumbs img{cursor:zoom-in}
+.stepline{font-size:14px;color:var(--muted);margin:12px 0 6px}
+.viewer{position:fixed;inset:0;background:rgba(7,21,38,.88);display:flex;align-items:center;justify-content:center;padding:16px;z-index:9}
+.viewer img{max-width:100%;max-height:85vh;border-radius:8px;background:#fff}
+.viewer button{position:absolute;top:calc(12px + env(safe-area-inset-top));right:12px}
+</style>
+</head>
+<body>
+<header class="top"><h1 id="appName">사진 속 글자 읽기</h1><span class="bricks" aria-hidden="true"><i></i><i></i></span></header>
+<main>
+  <p id="loadMsg" class="msg warn">과제를 불러오는 중이에요…</p>
+
+  <section class="card" id="whoCard">
+    <h2><span class="num">1</span>나는 누구</h2>
+    <div class="row">
+      <div><label for="grade">학년</label><select id="grade"><option value="">고르기</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+      <div><label for="cls">반</label><input id="cls" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off"></div>
+      <div><label for="num">번호</label><input id="num" inputmode="numeric" pattern="[0-9]*" maxlength="2" autocomplete="off"></div>
+      <div class="wide"><label for="name">이름</label><input id="name" maxlength="20" autocomplete="off"></div>
+      <div class="wide" id="codeBox" hidden><label for="code">우리 반 코드</label><input id="code" inputmode="numeric" maxlength="8" autocomplete="off"></div>
+    </div>
+    <button type="button" class="linkbtn" id="notMe">다른 사람이에요 (칸 비우기)</button>
+  </section>
+
+  <section class="card" id="taskCard">
+    <h2><span class="num">2</span>과제</h2>
+    <label for="task">과제 고르기</label>
+    <select id="task"></select>
+    <p class="question" id="question" hidden></p>
+  </section>
+
+  <section class="card" id="answerCard">
+    <h2><span class="num">3</span>공책 사진 올리기</h2>
+    <label class="btn primary block" for="photos">📷 공책 사진 찍기 · 고르기</label>
+    <input type="file" id="photos" class="vh" accept="image/*" multiple>
+    <p class="hint">한 쪽에 한 장씩, 3장까지. 밝은 곳에서 공책이 화면에 꽉 차게 찍어요.</p>
+    <div class="thumbs" id="thumbs"></div>
+    <button type="button" class="btn block" id="read" style="margin-top:14px" hidden>🔎 사진 속 글자 읽기</button>
+    <div id="checkBox" hidden>
+      <p class="stepline">사진을 눌러 크게 보고, 읽은 글에서 틀린 곳을 고쳐요.</p>
+      <p class="msg warn" id="miss" hidden></p>
+      <label for="answer">읽은 글</label>
+      <textarea id="answer" maxlength="5000"></textarea>
+      <button type="button" class="btn go block" id="send" style="margin-top:14px">✅ 확인했어요, 내기</button>
+    </div>
+    <div class="viewer" id="viewer" hidden><img id="viewerImg" alt="크게 본 사진"><button type="button" class="btn small" id="viewerClose">닫기</button></div>
+  </section>
+
+  <p id="sendMsg" class="msg bad" hidden></p>
+
+  <section class="card done" id="doneCard" hidden>
+    <p class="big">✅ 냈어요</p>
+    <p id="doneAt"></p>
+    <button type="button" class="btn primary" id="again">하나 더 내기</button>
+  </section>
+</main>
+<script>
+/* ===== 공통: 누구 · 과제 · 알림 ===== */
+var $ = function (id) { return document.getElementById(id); };
+var STATE = { tasks: [] };
+
+/* 서버(Code.gs) 함수 부르기. google.script.run 은 앱스 스크립트가 넣어 주는 통로입니다 */
+function call(fn, arg) {
+  return new Promise(function (resolve, reject) {
+    google.script.run
+      .withSuccessHandler(resolve)
+      .withFailureHandler(function () { reject(new Error('연결이 끊겼어요. 잠시 뒤 다시 눌러요.')); })[fn](arg);
+  });
+}
+
+function remember() {
+  try { localStorage.setItem('who', JSON.stringify({ grade: $('grade').value, cls: $('cls').value, num: $('num').value, name: $('name').value, code: $('code').value })); } catch (e) { }
+}
+function recall() {
+  try {
+    var w = JSON.parse(localStorage.getItem('who') || '{}');
+    ['grade', 'cls', 'num', 'name', 'code'].forEach(function (k) { if (w[k]) $(k).value = w[k]; });
+  } catch (e) { }
+}
+function who() {
+  return { grade: $('grade').value, cls: $('cls').value.trim(), num: $('num').value.trim(), name: $('name').value.trim(), code: $('code').value.trim(), task: $('task').value };
+}
+/** 화면에서 먼저 봅니다. 서버도 한 번 더 봅니다 */
+function whoProblem() {
+  var w = who();
+  if (!w.grade) return '학년을 골라요.';
+  if (!/^\d{1,2}$/.test(w.cls)) return '반을 숫자로 적어요.';
+  if (!/^\d{1,2}$/.test(w.num)) return '번호를 숫자로 적어요.';
+  if (!w.name) return '이름을 적어요.';
+  if (!$('codeBox').hidden && !w.code) return '우리 반 코드를 적어요.';
+  if (!w.task) return '과제를 골라요.';
+  return '';
+}
+function showError(text) {
+  var m = $('sendMsg');
+  m.textContent = '⚠️ ' + text;
+  m.hidden = false;
+  m.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function hideError() { $('sendMsg').hidden = true; }
+function busy(btn, on, label) {
+  if (on) { btn.dataset.label = btn.innerHTML; btn.disabled = true; btn.textContent = ''; var s = document.createElement('span'); s.className = 'busy'; btn.appendChild(s); btn.appendChild(document.createTextNode(' ' + (label || '보내는 중'))); }
+  else { btn.disabled = false; if (btn.dataset.label) btn.innerHTML = btn.dataset.label; }
+}
+function done(res) {
+  $('answerCard').hidden = true;
+  hideError();
+  $('doneAt').textContent = $('task').value + ' · ' + res.at;
+  $('doneCard').hidden = false;
+  $('doneCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+function showQuestion() {
+  var t = STATE.tasks.filter(function (x) { return x.name === $('task').value; })[0];
+  $('question').textContent = t ? t.question : '';
+  $('question').hidden = !(t && t.question);
+}
+
+['grade', 'cls', 'num', 'name', 'code'].forEach(function (k) { $(k).addEventListener('change', remember); });
+$('task').addEventListener('change', showQuestion);
+$('notMe').addEventListener('click', function () {
+  ['grade', 'cls', 'num', 'name', 'code'].forEach(function (k) { $(k).value = ''; });
+  try { localStorage.removeItem('who'); } catch (e) { }
+  $('grade').focus();
+});
+$('again').addEventListener('click', function () {
+  $('doneCard').hidden = true;
+  $('answerCard').hidden = false;
+  resetAnswer();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+function loadTasks() {
+  call('getTasks', {}).then(function (res) {
+    if (!res || !res.ok) throw new Error((res && res.msg) || '');
+    STATE.tasks = res.tasks || [];
+    if (res.app) { $('appName').textContent = res.app; document.title = res.app; }
+    $('codeBox').hidden = !res.needCode;
+    var sel = $('task');
+    sel.textContent = '';
+    if (!STATE.tasks.length) {
+      $('loadMsg').className = 'msg warn';
+      $('loadMsg').textContent = '지금 열린 과제가 없어요. 선생님께 여쭤요.';
+      return;
+    }
+    var first = document.createElement('option'); first.value = ''; first.textContent = '고르기'; sel.appendChild(first);
+    STATE.tasks.forEach(function (t) { var o = document.createElement('option'); o.value = t.name; o.textContent = t.name; sel.appendChild(o); });
+    if (STATE.tasks.length === 1) { sel.value = STATE.tasks[0].name; showQuestion(); }
+    $('loadMsg').hidden = true;
+  }).catch(function (err) {
+    $('loadMsg').className = 'msg bad';
+    $('loadMsg').textContent = '⚠️ 과제를 불러오지 못했어요. 화면을 새로 고쳐요.' + (err && err.message ? '\n(' + err.message + ')' : '');
+  });
+}
+
+/* 사진을 가로 세로 1600픽셀 안의 jpg 로 줄입니다. 드라이브 OCR 은 2MB 이하 사진만 읽습니다 */
+function shrinkImage(file, maxSide) {
+  maxSide = maxSide || 1600;
+  return new Promise(function (resolve, reject) {
+    var url = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function () {
+      var s = Math.min(1, maxSide / Math.max(img.naturalWidth, img.naturalHeight));
+      var c = document.createElement('canvas');
+      c.width = Math.round(img.naturalWidth * s); c.height = Math.round(img.naturalHeight * s);
+      var g = c.getContext('2d');
+      g.fillStyle = '#fff'; g.fillRect(0, 0, c.width, c.height);
+      g.drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url);
+      var data = c.toDataURL('image/jpeg', 0.85);
+      resolve({ b64: data.split(',')[1], mime: 'image/jpeg', name: (file.name || 'photo').replace(/\.[^.]+$/, '') + '.jpg', preview: data });
+    };
+    img.onerror = function () { URL.revokeObjectURL(url); reject(new Error('이 사진 형식은 열지 못했어요. 화면을 캡처해 올리거나 카메라 설정을 「호환성 우선」으로 바꿔요.')); };
+    img.src = url;
+  });
+}
+function fileToB64(file) {
+  return new Promise(function (resolve, reject) {
+    var r = new FileReader();
+    r.onload = function () { resolve({ b64: String(r.result).split(',')[1], mime: file.type || 'application/octet-stream', name: file.name || 'file' }); };
+    r.onerror = function () { reject(new Error('파일을 읽지 못했어요.')); };
+    r.readAsDataURL(file);
+  });
+}
+
+/* ===== 다 단계: 사진 → 드라이브 OCR → 학생 확인 ===== */
+var MAX_PHOTOS = 3;
+STATE.photos = []; STATE.fileIds = []; STATE.ocr = '';
+
+function drawThumbs() {
+  var box = $('thumbs');
+  box.textContent = '';
+  STATE.photos.forEach(function (f, i) {
+    var fig = document.createElement('figure');
+    var im = document.createElement('img'); im.src = f.preview; im.alt = (i + 1) + '쪽 사진';
+    im.addEventListener('click', function () { $('viewerImg').src = f.preview; $('viewer').hidden = false; });
+    var cap = document.createElement('figcaption'); cap.textContent = (i + 1) + '쪽';
+    var x = document.createElement('button'); x.type = 'button'; x.className = 'x'; x.textContent = '×'; x.setAttribute('aria-label', (i + 1) + '쪽 빼기');
+    x.addEventListener('click', function () { STATE.photos.splice(i, 1); photosChanged(); });
+    fig.appendChild(im); fig.appendChild(cap); fig.appendChild(x);
+    box.appendChild(fig);
+  });
+  $('read').hidden = !STATE.photos.length || !$('checkBox').hidden;
+}
+function photosChanged() {
+  STATE.fileIds = []; STATE.ocr = '';
+  $('checkBox').hidden = true;
+  drawThumbs();
+}
+$('viewerClose').addEventListener('click', function () { $('viewer').hidden = true; });
+$('viewer').addEventListener('click', function (e) { if (e.target === this) this.hidden = true; });
+
+$('photos').addEventListener('change', function () {
+  hideError();
+  var picked = Array.prototype.slice.call(this.files || []);
+  this.value = '';
+  var room = MAX_PHOTOS - STATE.photos.length;
+  if (picked.length > room) showError('사진은 ' + MAX_PHOTOS + '장까지예요.');
+  picked.slice(0, Math.max(room, 0)).reduce(function (chain, file) {
+    return chain.then(function () { return shrinkImage(file); }).then(function (f) { STATE.photos.push(f); photosChanged(); });
+  }, Promise.resolve()).catch(function (err) { showError(err.message); });
+});
+
+$('read').addEventListener('click', function () {
+  hideError();
+  var why = whoProblem();
+  if (why) { showError(why); return; }
+  remember();
+  var btn = $('read');
+  busy(btn, true, '사진을 보내고 글자를 읽는 중 (10초쯤)');
+  var p = who();
+  p.images = STATE.photos.map(function (f) { return { b64: f.b64, mime: f.mime, name: f.name }; });
+  call('readPhotos', p).then(function (res) {
+    busy(btn, false);
+    if (!res.ok) { showError(res.msg); return; }
+    STATE.fileIds = res.files.map(function (f) { return f.id; });
+    STATE.ocr = res.text || '';
+    $('answer').value = STATE.ocr;
+    var miss = (res.misses || []).join('\n');
+    $('miss').textContent = miss ? '⚠️ ' + miss + '\n읽지 못한 부분은 직접 적어요.' : '';
+    $('miss').hidden = !miss;
+    $('checkBox').hidden = false;
+    btn.hidden = true;
+    $('answer').focus();
+  }).catch(function (err) {
+    busy(btn, false);
+    showError(err.message);
+  });
+});
+
+function resetAnswer() {
+  STATE.photos = [];
+  $('answer').value = '';
+  photosChanged();
+}
+
+$('send').addEventListener('click', function () {
+  hideError();
+  var why = whoProblem() || ($('answer').value.trim() ? '' : '글이 비어 있어요. 읽은 글을 확인하거나 직접 적어요.');
+  if (why) { showError(why); return; }
+  var btn = $('send');
+  busy(btn, true);
+  var p = who();
+  p.fileIds = STATE.fileIds;
+  p.ocr = STATE.ocr;
+  p.text = $('answer').value;
+  call('submitChecked', p).then(function (res) {
+    busy(btn, false);
+    if (!res.ok) { showError(res.msg); return; }
+    done(res);
+  }).catch(function (err) {
+    busy(btn, false);
+    showError(err.message);
+  });
+});
+
+recall();
+loadTasks();
+</script>
+</body>
+</html>

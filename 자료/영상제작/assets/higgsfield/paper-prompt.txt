@@ -1,0 +1,50 @@
+Create a 20-second retro paper-cutout animated educational film about classroom disruption, privacy, and the emotional harm caused by sharing a teacher’s image and personal contact information online.
+VISUAL STYLE
+Use handcrafted retro paper animation with layered cut-paper shapes, visible paper fibers, matte printed surfaces, delicate halftone textures, subtly irregular cut edges, and soft shadows between paper layers. Animate the characters through articulated paper joints, carefully stepped movements, and replacement facial expressions. Use gentle multiplane depth and restrained camera movement.
+Preserve the reference images’ original colors and brightness. Establish the retro atmosphere through paper texture, printing detail, and animation timing. Present the events with a serious, empathetic educational tone.
+REFERENCE CONSISTENCY
+Use the attached character sheets as the exact appearance references. Student A is the male high-school student holding the streaming smartphone. Teacher B is the male teacher conducting the lesson.
+Preserve each character’s silhouette, facial structure, hairstyle, clothing, accessories, colors, and body proportions throughout the film. Apply animation through body movements, poses, and facial-expression changes while maintaining the original character design.
+Use the attached classroom sheet as the exact environmental reference. Maintain its spatial depth, architectural proportions, furniture arrangement, object placement, compositional relationships, daylight direction, and natural brightness.
+Every classroom object introduced remains physically present in its established location through the end of the film. Objects outside the current framing retain their positions, and every returning view reveals the same arrangement. Preserve environmental continuity across the later time transition. Treat the classroom and staff office as distinct locations.
+Maintain consistent identities, appearances, and seating positions for the surrounding students.
+ON-SCREEN GRAPHICS AND PERFORMANCE
+All visible letters and numbers appear as indecipherable fictional glyphs, including blackboard writing, notebook marks, interface labels, usernames, comments, and contact details.
+Represent the contact information as three fictional glyphs, a hyphen, four fictional glyphs, a hyphen, and four fictional glyphs. Render hearts, thumbs-up icons, share arrows, telephone icons, and message symbols as recognizable paper-cut graphics.
+Prepare character performances for Korean dialogue recorded separately in post-production. Use clear speaking beats, restrained replacement-mouth animation, expressive head movements, and natural pauses. The production audio consists of subtle classroom ambience, paper-like movement sounds, and phone vibrations; the spoken performance is supplied by the later Korean recording.
+Maintain A’s smartphone in his left hand throughout scenes 1–4. Keep its shape, color, case, and orientation consistent. Each live camera preview corresponds to the phone lens direction and the subjects within its field of view.
+TIMELINE
+00:00–00:03 — SCENE 1: LIVESTREAMING BENEATH THE DESK
+A lesson is underway at a coeducational high school in South Korea.
+Begin with a medium three-quarter side view of A seated at his desk. Teacher B is visible at the blackboard in the background. Gently lower the framing to reveal A’s left hand beneath the tabletop.
+A holds an actively streaming smartphone under the desk, with its rear camera aimed through the open space toward the classroom. The screen faces A and is visible to the viewer at an oblique angle.
+The display shows the corresponding low-angle classroom view. Small paper-cut hearts and thumbs-up icons rise along its edge in real time, accompanied by fictional-glyph comments.
+A’s right hand moves a pencil across an open notebook, imitating note-taking. His eyes briefly glance toward the phone. End as his left arm begins raising the smartphone.
+00:03–00:06 — SCENE 2: THE CLASSROOM IS BROADCAST
+Continue the upward arm movement with a matching camera tilt. A raises the smartphone high above his desk while remaining seated.
+A slowly turns his upper body and sweeps the phone camera across the classroom. Use a short lateral camera move into an over-the-shoulder composition, preserving the established room layout.
+The phone’s live preview reveals the recognizable faces of nearby male and female students, followed by Teacher B at the blackboard. Hearts and thumbs-up icons continue appearing.
+Several students notice the raised phone and look toward A with startled expressions. B turns toward the movement. End with the smartphone directed toward the front of the classroom.
+00:06–00:10 — SCENE 3: THE TEACHER INTERVENES
+Cut on B’s head turn to a medium shot of him beside the blackboard. His chalk hand pauses beside a line of fictional glyphs.
+B lowers his writing hand and walks toward A with measured articulated-paper steps. Track alongside him briefly, keeping the blackboard, aisle, and A’s desk in their established spatial relationship.
+B faces A with a firm, concerned expression. He extends an open hand toward the phone and gestures downward, communicating a request to lower the smartphone and end the livestream.
+Provide a clear speaking beat for a short Korean instruction recorded later: restrained mouth movements, a deliberate head gesture, and a brief pause.
+A watches B while holding the smartphone in his left hand. End as A rotates its camera directly toward B’s face.
+00:10–00:13 — SCENE 4: THE TEACHER’S FACE FILLS THE STREAM
+Match A’s phone rotation into a close over-the-shoulder shot.
+A steadies the smartphone in his left hand and adjusts the on-screen zoom with his right hand. B’s face fills the live preview while the phone remains at the established physical distance.
+B’s expression shifts from firm concern to shock and discomfort. Paper-cut hearts, thumbs-up icons, and fictional-glyph comments continue rising around his face on the display.
+Keep nearby classmates visible around the smartphone in the main shot. They appear alarmed and embarrassed. Several lower their heads toward their desks.
+Push toward the smartphone until B’s displayed face dominates the composition. Hold the image briefly to prepare a match cut.
+00:13–00:16 — SCENE 5: THE CAPTURED IMAGE IS SHARED
+Use a brief dissolve through an establishing view of the now-empty classroom to indicate that lessons have finished and the students have returned home. Preserve every established classroom object in its original location.
+Match-cut to the identical captured image of B inside a social-media post on B’s own smartphone, resting on his staff-office desk.
+Directly beneath B’s image, display a contact string consisting of three fictional glyphs, a hyphen, four fictional glyphs, a hyphen, and four fictional glyphs.
+The feed advances through repeated shared posts containing the same captured image and contact string. Layered paper-cut share arrows and notification markers communicate rapid circulation.
+End as an incoming-call panel appears over the social-media feed on this same phone.
+00:16–00:20 — SCENE 6: REPEATED CALLS AND MESSAGES
+Pull back briefly from B’s smartphone to reveal him seated at his staff-office desk, shoulders rounded and head lowered. His expression conveys emotional exhaustion and distress.
+The phone vibrates repeatedly against the desk. Incoming-call panels alternate with stacked message notifications. All written content uses the established fictional glyph system.
+Move into a close-up of the vibrating smartphone while B’s bowed posture remains softly visible behind it. Notification icons accumulate across the display in a steady, overwhelming rhythm.
+During the final second, apply a gradual editorial fade over the entire composition while the phone continues receiving notifications. The image reaches full black precisely at 00:20.

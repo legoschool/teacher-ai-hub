@@ -1,0 +1,495 @@
+{
+  "checked": "2026-09-17",
+  "models": [
+    {
+      "key": "seedance",
+      "name": "Seedance 2.5",
+      "kind": "영상",
+      "url": "https://higgsfield.ai/seedance-2.5",
+      "video": "https://static.higgsfield.ai/seedance-2.5/v2/features/feature-1.mp4",
+      "poster": "https://static.higgsfield.ai/seedance-2.5/v2/seedance-og.webp",
+      "feature": "참조 자료를 함께 주고 소리까지 생성하는 작업에 맞춥니다. 공식 페이지는 최대 30초와 부분 수정을 안내합니다.",
+      "watch": "공식 소리 생성 예시입니다. 소리가 동작 시작과 끝에 맞는지 듣고, 장면이 바뀔 때 대상이 유지되는지 봅니다.",
+      "task": "학교 행사 예고편의 한 장면. 행사 로고는 생성 후 편집기에서 얹습니다.",
+      "localPoster": "assets/reference/model-seedance.jpg"
+    },
+    {
+      "key": "kling",
+      "name": "Kling 3.0",
+      "kind": "영상",
+      "url": "https://higgsfield.ai/kling-3.0",
+      "video": "https://static.higgsfield.ai/kling-3/features/feature-2.mp4",
+      "poster": "https://static.higgsfield.ai/kling-3/hero/hero-1-thumbnail.webp",
+      "feature": "한 생성 안에서 여러 샷을 구성하는 기능이 특징입니다. 공식 안내는 최대 15초, 최대 6개 카메라 컷과 음성 생성을 설명합니다.",
+      "watch": "다중 샷 공식 예시입니다. 컷이 바뀌어도 인물의 옷과 물체 위치가 연결되는지 확인합니다.",
+      "task": "분리배출 공익광고의 전체 장면과 물체 근접 장면을 연결합니다.",
+      "localPoster": "assets/reference/model-kling.jpg"
+    },
+    {
+      "key": "veo",
+      "name": "Veo 3.1",
+      "kind": "영상",
+      "url": "https://higgsfield.ai/veo3.1",
+      "video": "https://static.higgsfield.ai/veo31/flf.mp4",
+      "poster": "https://static.higgsfield.ai/veo31/start&endframe.webp",
+      "feature": "시작과 끝 프레임을 연결하거나 대사와 환경음을 포함한 짧은 장면을 만듭니다. Higgsfield 안내 기준 길이는 4초, 6초, 8초입니다.",
+      "watch": "시작과 끝 프레임 연결 예시입니다. 중간에 모양이 녹듯 바뀌는지, 목표 끝 화면에 도착하는지 봅니다.",
+      "task": "직접 찍은 화분 사진 두 장으로 관찰 기록의 전환 장면을 만듭니다. 실제 성장 기록과 AI 장면은 구분합니다.",
+      "localPoster": "assets/reference/model-veo.jpg"
+    },
+    {
+      "key": "wan",
+      "name": "Wan 2.6",
+      "kind": "영상",
+      "url": "https://higgsfield.ai/wan-2.6",
+      "video": "https://static.higgsfield.ai/wan-2.6/card-1-mini.mp4",
+      "poster": "https://static.higgsfield.ai/wan-2.6/card-1-mini-thumbnail.webp",
+      "feature": "참조 영상과 다중 샷, 소리를 함께 다루는 모델입니다. 공식 안내는 최대 15초를 제시합니다. 카탈로그의 Wan 3.0과 이 예시 버전은 구분합니다.",
+      "watch": "공식 기능 예시입니다. 움직임이 커질 때 얼굴과 손, 사물의 윤곽이 흔들리는지 확인합니다.",
+      "task": "학생이 그린 캐릭터의 인사 장면을 만들고 원본 그림과 비교합니다.",
+      "localPoster": "assets/reference/model-wan.jpg"
+    },
+    {
+      "key": "h3",
+      "name": "MiniMax H3 / Hailuo 계열",
+      "kind": "영상",
+      "url": "https://higgsfield.ai/minimax/h3",
+      "video": "https://static.higgsfield.ai/minimax-h3/editing.mp4",
+      "poster": "https://static.higgsfield.ai/minimax-h3/editing.webp",
+      "feature": "이미지, 영상, 오디오를 참조하고 지시문으로 일부를 고치는 작업을 안내합니다. 공식 페이지는 2K 영상과 스테레오 오디오를 소개합니다.",
+      "watch": "지시문 기반 편집 예시입니다. 고치라고 한 대상만 바뀌었는지, 배경이나 글자가 함께 망가지지 않았는지 비교합니다.",
+      "task": "이미 만든 캠페인 장면에서 배경만 바꿉니다. 웹 계정의 제공 상태와 미리보기 표시를 먼저 확인합니다.",
+      "localPoster": "assets/reference/model-h3.jpg"
+    },
+    {
+      "key": "soul",
+      "name": "Soul 2.0",
+      "kind": "이미지",
+      "url": "https://higgsfield.ai/soul-intro",
+      "poster": "https://static.higgsfield.ai/soul-v2/hero-1.webp",
+      "feature": "사진풍 인물과 분위기를 만드는 이미지 모델입니다. 영상 생성 전에 구도와 조명을 정할 때 씁니다.",
+      "watch": "공식 이미지 예시입니다. 피부, 머리카락, 배경의 질감을 확대해 봅니다. 이 이미지 자체는 영상이 아닙니다.",
+      "task": "실제 학생 사진 대신 가상의 안내 캐릭터 시안을 만듭니다.",
+      "localPoster": "assets/reference/model-soul.jpg"
+    },
+    {
+      "key": "nano",
+      "name": "Nano Banana Pro / Nano Banana 2",
+      "kind": "이미지",
+      "url": "https://higgsfield.ai/nano-banana-intro",
+      "poster": "https://static.higgsfield.ai/nano-banana-2/generation-2.webp",
+      "feature": "이미지 생성과 수정에 쓰는 Google 모델 계열입니다. Pro는 복잡한 구성, 2는 빠른 반복 작업을 비교할 후보입니다. 한글 정확성은 결과마다 확인합니다.",
+      "watch": "공식 소개 이미지입니다. 같은 원본으로 물체 하나만 바꾸고 나머지 구도가 보존되는지 시험합니다.",
+      "task": "포스터의 배경 시안을 만든 뒤 정확한 제목과 학교명은 Canva에서 입력합니다.",
+      "localPoster": "assets/reference/model-nano.jpg"
+    },
+    {
+      "key": "cinema",
+      "name": "Cinema Studio",
+      "kind": "연출 도구",
+      "url": "https://higgsfield.ai/cinematic-video-generator",
+      "video": "https://static.higgsfield.ai/cinematic-intro/marketing.mp4",
+      "poster": "https://static.higgsfield.ai/cinematic-intro/cinema-studio-og.webp",
+      "feature": "카메라와 렌즈, 움직임을 다루는 제작 화면입니다. 앞의 영상 모델과 같은 종류의 모델명으로 비교하지 않습니다.",
+      "watch": "공식 제작 소개 영상입니다. 화면의 움직임이 인물 동작인지 카메라 이동인지 나누어 봅니다.",
+      "task": "같은 장면을 고정 카메라와 천천히 다가가는 카메라로 만들고 전달되는 느낌을 비교합니다.",
+      "localPoster": "assets/reference/model-cinema.jpg"
+    }
+  ],
+  "references": {
+    "vrew": [
+      "Vrew 공식 다운로드",
+      "https://vrew.ai/ko/",
+      "설치 파일과 운영체제를 확인합니다.",
+      "vrew"
+    ],
+    "text": [
+      "Vrew 텍스트로 비디오",
+      "https://vrew.ai/ko/feature/text-to-video/",
+      "대본이 장면과 내레이션으로 바뀌는 공식 예시를 봅니다.",
+      "vrew"
+    ],
+    "vedit": [
+      "Vrew 텍스트 편집",
+      "https://vrew.ai/ko/blog/all/text-based-video-editing/",
+      "문장을 고치며 영상을 편집하는 흐름을 확인합니다.",
+      "vrew"
+    ],
+    "education": [
+      "Canva 교사 인증 기준",
+      "https://www.canva.com/ko_kr/education/eligibility-guidelines/",
+      "교사 자격과 신청 증빙을 공식 기준에서 확인합니다.",
+      "canva"
+    ],
+    "school": [
+      "Canva 2026 교사 도구",
+      "https://www.canva.com/ko_kr/education/",
+      "새 학기 과제와 학습 활동에 쓸 기능을 찾습니다.",
+      "canva"
+    ],
+    "canvavideo": [
+      "Canva 영상 편집기",
+      "https://www.canva.com/ko_kr/video-editor/",
+      "타임라인과 영상 제작 기능을 살펴봅니다.",
+      "canva"
+    ],
+    "layers": [
+      "Magic Layers 사용법",
+      "https://www.canva.com/ko_kr/help/editable-magic-layers-variantb/",
+      "이미지를 편집 가능한 요소로 다루는 조건을 확인합니다.",
+      "canva"
+    ],
+    "captions": [
+      "Canva 자막 생성과 수정",
+      "https://www.canva.com/ko_kr/help/generate-edit-captions-on-videos/",
+      "자동 생성된 자막을 고치고 내보내는 방법입니다.",
+      "canva"
+    ],
+    "updates": [
+      "Canva 영상 편집 업데이트",
+      "https://www.canva.com/ko_kr/video-editor/",
+      "2026년 2월 공개한 편집 기능을 확인합니다.",
+      "canva"
+    ],
+    "cai": [
+      "Canva 안의 AI 영상",
+      "https://www.canva.com/ko_kr/ai-video-generator/",
+      "Veo 기반 영상 클립 기능의 공식 소개입니다.",
+      "canva"
+    ],
+    "share": [
+      "Canva 링크 공유",
+      "https://www.canva.com/ko_kr/help/share-via-link-or-email-variantb/",
+      "보기와 편집 권한을 구분해 공유합니다.",
+      "canva"
+    ],
+    "license": [
+      "Canva 콘텐츠 이용 조건",
+      "https://www.canva.com/ko_kr/policies/content-license-agreement/",
+      "요소 추출 자체가 이용 허락을 뜻하지는 않습니다.",
+      "canva"
+    ],
+    "flow": [
+      "Flow 공식 제작 팁",
+      "https://support.google.com/flow/answer/16353334?hl=ko",
+      "장면을 설계하고 결과를 고치는 방법입니다.",
+      "flow"
+    ],
+    "flowhelp": [
+      "Flow 접속과 사용 조건",
+      "https://support.google.com/flow/answer/16353333?hl=ko",
+      "지역과 계정, 워터마크, 오류 안내를 확인합니다.",
+      "flow"
+    ],
+    "frames": [
+      "Flow 프레임과 참조 이미지",
+      "https://support.google.com/flow/answer/16353334?hl=ko",
+      "시작 이미지와 참조 자료의 역할을 구분합니다.",
+      "flow"
+    ],
+    "models": [
+      "Higgsfield 모델 선택 화면",
+      "https://www.youtube.com/watch?v=QVddImzUS8o&t=88s",
+      "한국어 강좌에서 이미지·비디오 탭과 모델 선택 과정을 확인합니다.",
+      "higgsfield"
+    ],
+    "academy": [
+      "Higgsfield Academy",
+      "https://www.youtube.com/watch?v=QVddImzUS8o",
+      "모델 선택과 제작 과정을 공식 강좌에서 확인합니다.",
+      "higgsfield"
+    ],
+    "camera": [
+      "Higgsfield 카메라 연출",
+      "https://www.youtube.com/watch?v=QVddImzUS8o&t=457s",
+      "대상의 움직임과 카메라의 움직임을 나눠 지시합니다.",
+      "higgsfield"
+    ],
+    "capcut": [
+      "CapCut 내보내기 조건",
+      "https://www.capcut.com/ko-kr/tools/online-video-editor",
+      "유료 요소가 들어갔을 때 내보내기 조건을 확인합니다.",
+      "capcut"
+    ],
+    "clipchamp": [
+      "Clipchamp 무료 플랜",
+      "https://clipchamp.com/ko/pricing/",
+      "무료 범위와 내보내기 조건을 비교합니다.",
+      "capcut"
+    ],
+    "dalle": [
+      "DALL-E 2 공식 기록",
+      "https://openai.com/index/dall-e-2/",
+      "과거 이미지 생성 도구의 발전사를 읽는 자료입니다.",
+      "history"
+    ],
+    "bing": [
+      "Bing 이미지 생성과 Copilot 소개",
+      "https://news.microsoft.com/source/asia/2023/09/22/microsoftcopilot2023/?lang=ko",
+      "2023년 검색 서비스와 이미지 생성의 결합을 확인합니다.",
+      "history"
+    ],
+    "aif": [
+      "2026 AI 영화제 수상작",
+      "https://aif.runwayml.com/",
+      "작품 포스터를 선택하면 공식 감상 화면을 엽니다.",
+      "aif"
+    ],
+    "psa": [
+      "공익광고 공식 아카이브",
+      "https://www.kobaco.co.kr/site/main/archive/advertising/5",
+      "주제와 연도별로 실제 광고를 찾아봅니다.",
+      "psa"
+    ],
+    "clab": [
+      "아이들과 만든 영상 채널",
+      "https://www.youtube.com/@clab-vd5tg",
+      "완성 작품에서 다음 수업의 소재를 찾습니다.",
+      "class"
+    ],
+    "lego": [
+      "레고학교 영상 자료",
+      "https://www.youtube.com/@legoschool6076",
+      "교사의 제작 사례와 설명 영상을 확인합니다.",
+      "class"
+    ],
+    "padlet": [
+      "2022 계절학교 작품 기록",
+      "https://padlet.com/schoolemotion20/2022-f09nmq6w3f3gcbd0",
+      "작품과 댓글이 남아 있는 수업 기록입니다.",
+      "class"
+    ]
+  },
+  "chapterReferences": {
+    "start": [
+      "vrew",
+      "school"
+    ],
+    "editing-basics": [
+      "vedit",
+      "canvavideo"
+    ],
+    "tool-map": [
+      "models",
+      "clipchamp"
+    ],
+    "history": [
+      "dalle",
+      "bing"
+    ],
+    "language": [
+      "flow",
+      "camera"
+    ],
+    "scenario": [
+      "aif",
+      "psa"
+    ],
+    "vrew-install": [
+      "vrew",
+      "text"
+    ],
+    "vrew-create": [
+      "text",
+      "vedit"
+    ],
+    "vrew-edit": [
+      "vedit",
+      "text"
+    ],
+    "canva-verify": [
+      "education",
+      "school"
+    ],
+    "canva-basics": [
+      "canvavideo",
+      "license"
+    ],
+    "canva-functions": [
+      "updates",
+      "layers"
+    ],
+    "canva-ai": [
+      "cai",
+      "layers"
+    ],
+    "canva-video": [
+      "canvavideo",
+      "captions"
+    ],
+    "canva-share": [
+      "share",
+      "school"
+    ],
+    "flow": [
+      "flow",
+      "flowhelp"
+    ],
+    "higgsfield": [
+      "models",
+      "academy"
+    ],
+    "capcut": [
+      "capcut",
+      "clipchamp"
+    ],
+    "examples": [
+      "clab",
+      "lego"
+    ],
+    "advanced": [
+      "frames",
+      "camera"
+    ],
+    "teaching": [
+      "psa",
+      "school"
+    ],
+    "downloads": [
+      "text",
+      "canvavideo"
+    ],
+    "plan": [
+      "education",
+      "flowhelp"
+    ],
+    "sources": [
+      "license",
+      "aif"
+    ],
+    "our-story": [
+      "padlet",
+      "clab"
+    ]
+  },
+  "assets": [
+    {
+      "file": "assets/reference/icon-vrew.jpg",
+      "source": "https://vrew.ai/favicon.ico?v=20201230"
+    },
+    {
+      "file": "assets/reference/icon-higgsfield.jpg",
+      "source": "https://higgsfield.ai/icon.png"
+    },
+    {
+      "file": "assets/reference/icon-flow.jpg",
+      "source": "https://www.gstatic.com/aitestkitchen/website/flow/favicon/flow_favicon_b.png"
+    },
+    {
+      "file": "assets/reference/icon-capcut.jpg",
+      "source": "https://sf16-web-tos-buz.capcutstatic.com/obj/capcut-web-buz-sg/common/images/lv_web-2.ico"
+    },
+    {
+      "file": "assets/reference/model-kling.jpg",
+      "source": "https://static.higgsfield.ai/kling-3/hero/hero-1-thumbnail.webp"
+    },
+    {
+      "file": "assets/reference/model-veo.jpg",
+      "source": "https://static.higgsfield.ai/veo31/start&endframe.webp"
+    },
+    {
+      "file": "assets/reference/model-wan.jpg",
+      "source": "https://static.higgsfield.ai/wan-2.6/card-1-mini-thumbnail.webp"
+    },
+    {
+      "file": "assets/reference/model-h3.jpg",
+      "source": "https://static.higgsfield.ai/minimax-h3/editing.webp"
+    },
+    {
+      "file": "assets/reference/model-soul.jpg",
+      "source": "https://static.higgsfield.ai/soul-v2/hero-1.webp"
+    },
+    {
+      "file": "assets/reference/model-cinema.jpg",
+      "source": "https://static.higgsfield.ai/cinematic-intro/cinema-studio-og.webp"
+    },
+    {
+      "file": "assets/reference/yt-WhvFP4Q_n90.jpg",
+      "source": "https://i.ytimg.com/vi/WhvFP4Q_n90/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-V5AFQaEbHQU.jpg",
+      "source": "https://i.ytimg.com/vi/V5AFQaEbHQU/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-wNKaYvhTauM.jpg",
+      "source": "https://i.ytimg.com/vi/wNKaYvhTauM/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/film-the-well_web-v2.jpg",
+      "source": "https://d3phaj0sisr2ct.cloudfront.net/site/assets/the-well_web-v2.webp"
+    },
+    {
+      "file": "assets/reference/film-postman.jpg",
+      "source": "https://d3phaj0sisr2ct.cloudfront.net/site/assets/postman.webp"
+    },
+    {
+      "file": "assets/reference/film-a-face-only-a-mother-could-love_web-v2.jpg",
+      "source": "https://d3phaj0sisr2ct.cloudfront.net/site/assets/a-face-only-a-mother-could-love_web-v2.webp"
+    },
+    {
+      "file": "assets/reference/yt-ki2bjQpqn4U.jpg",
+      "source": "https://i.ytimg.com/vi/ki2bjQpqn4U/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-RnXbstCrWZI.jpg",
+      "source": "https://i.ytimg.com/vi/RnXbstCrWZI/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/flow-preview.jpg",
+      "source": "https://www.gstatic.com/aitestkitchen/website/flow/landing_page/og-flow-1200x627.png"
+    },
+    {
+      "file": "assets/reference/capcut-preview.jpg",
+      "source": "https://p16-seeyou-sg.ibyteimg.com/tos-alisg-i-2zwwjm3azk-sg/af60401275b14f6684c2af1f7564d717~tplv-2zwwjm3azk-image.image"
+    },
+    {
+      "file": "assets/reference/yt-1_poB9rx3YY.jpg",
+      "source": "https://i.ytimg.com/vi/1_poB9rx3YY/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-ap5mpwuf290.jpg",
+      "source": "https://i.ytimg.com/vi/ap5mpwuf290/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-398OdKqrJCI.jpg",
+      "source": "https://i.ytimg.com/vi/398OdKqrJCI/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-QgTo_XKhqUM.jpg",
+      "source": "https://i.ytimg.com/vi/QgTo_XKhqUM/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-bsTKnF2wEJA.jpg",
+      "source": "https://i.ytimg.com/vi/bsTKnF2wEJA/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-cL7WtQjK3FM.jpg",
+      "source": "https://i.ytimg.com/vi/cL7WtQjK3FM/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-DG4Oep7pQ3Y.jpg",
+      "source": "https://i.ytimg.com/vi/DG4Oep7pQ3Y/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-kKV0tD0o-Ds.jpg",
+      "source": "https://i.ytimg.com/vi/kKV0tD0o-Ds/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-0Xbm7cJwuxM.jpg",
+      "source": "https://i.ytimg.com/vi/0Xbm7cJwuxM/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/yt-HEyyLtixg3k.jpg",
+      "source": "https://i.ytimg.com/vi/HEyyLtixg3k/hqdefault.jpg"
+    },
+    {
+      "file": "assets/reference/model-seedance.jpg",
+      "source": "https://static.higgsfield.ai/seedance-2.5/v2/seedance-og.webp"
+    },
+    {
+      "file": "assets/reference/model-nano.jpg",
+      "source": "https://static.higgsfield.ai/nano-banana-2/generation-2.webp"
+    }
+  ]
+}

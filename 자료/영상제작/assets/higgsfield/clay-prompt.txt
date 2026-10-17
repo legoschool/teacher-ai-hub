@@ -1,0 +1,45 @@
+Create a 20-second clay stop-motion educational film about classroom disruption, privacy violations, and the emotional consequences of sharing someone’s face and personal contact information online.
+VISUAL STYLE AND REFERENCE CONSISTENCY
+Use handcrafted clay animation with matte modeling-clay textures, subtle fingerprints, miniature physical sets, and carefully articulated frame-by-frame movements.
+Use the attached character sheets as the exact character-design references. Student A is the male high-school student involved in the livestream. Teacher B is the male teacher conducting the lesson. Preserve each character’s facial structure, hairstyle, clothing, accessories, colors, silhouette, and body proportions. Changes are limited to body movements, poses, and facial expressions.
+Use the attached classroom sheet as the exact classroom reference. Preserve its spatial depth, architectural proportions, furniture arrangement, object placement, overall composition, and natural brightness. Maintain consistent daylight direction, exposure, and color temperature across classroom shots.
+Every classroom object that appears remains physically present in its established location for the rest of the film. Objects outside the camera’s framing retain their established positions, and subsequent views reveal the same arrangement. The classroom and staff office remain distinct, coherent locations.
+The setting is a lesson in progress at a coeducational high school in South Korea. Maintain consistent student identities, seating positions, and appearances throughout the classroom sequence.
+All on-screen writing and numerical information—including blackboard writing, notebook marks, usernames, comments, interface labels, and contact details—appear as indecipherable fictional glyphs. Represent the contact string with three fictional glyphs, a hyphen, four fictional glyphs, a hyphen, and four fictional glyphs. Hearts, thumbs-up symbols, telephone symbols, and message icons remain visually recognizable.
+PERFORMANCE AND CONTINUITY
+Prepare the performances for Korean dialogue recorded separately in post-production. Use clear speaking beats, restrained mouth movements, expressive head gestures, and natural pauses suitable for later Korean voice-over.
+Maintain the same smartphone in A’s left hand throughout scenes 1–4. Maintain consistent phone orientation, hand placement, and character positions across shot transitions. Each phone-camera preview matches the direction of its lens and the characters positioned within its view.
+Use motivated camera movements, consistent screen direction, match cuts, and brief reaction holds. Present the event with a serious, empathetic educational tone.
+TIMELINE
+00:00–00:03 — SCENE 1: LIVESTREAMING BENEATH THE DESK
+Begin with a medium three-quarter side view of A seated at his classroom desk. Include Teacher B teaching at the blackboard in the background.
+Gently lower the camera toward desk height to reveal A’s left hand holding a smartphone beneath the tabletop. The rear camera points through the open space beneath the desk toward the classroom. The display faces A and is visible from the main camera’s oblique viewing angle.
+The smartphone is actively livestreaming. Its display shows the corresponding low-angle classroom view, with thumbs-up icons and hearts rising in real time alongside fictional-glyph comments.
+A’s right hand moves a pencil across an open notebook, imitating note-taking. His gaze briefly drops toward the phone and returns to the notebook. End as his left arm begins lifting the smartphone.
+00:00–00:06 — SCENE 2: THE WHOLE CLASSROOM ENTERS THE STREAM
+[Scene action occupies 00:03–00:06.]
+Continue A’s upward arm movement with a matching camera tilt. A raises the smartphone above desk level and rotates his torso slightly while remaining seated, sweeping its rear camera across the classroom.
+Follow the phone with a short arc into an over-the-shoulder view. The livestream preview reveals the recognizable faces of nearby male and female students, then Teacher B at the blackboard, in sequence as the lens turns.
+Hearts and thumbs-up icons continue floating along the screen edge. Nearby students notice the phone and exchange startled looks. B turns his head toward A. End with the smartphone aimed toward the front of the classroom.
+00:06–00:10 — SCENE 3: THE TEACHER INTERVENES
+Cut on B’s head turn to a medium view of him at the blackboard. His chalk hand pauses beside the fictional glyphs he has been writing.
+B lowers his hand and takes several purposeful steps toward A. Use a short tracking movement that preserves the established relationship between the blackboard, the aisle, and A’s desk.
+B faces A with a firm, concerned expression. He extends an open hand toward the smartphone and gestures downward, communicating that the phone should be lowered and the livestream ended.
+Give B a clear speaking beat suitable for a short Korean instruction added later: measured mouth movements, a deliberate head gesture, and a brief pause for A’s response.
+A keeps the smartphone in his left hand and turns its lens directly toward B. End on this rotation.
+00:10–00:13 — SCENE 4: THE TEACHER’S FACE IS TARGETED
+Match A’s phone rotation into a close over-the-shoulder shot. A steadies the smartphone in his left hand and uses his right hand to adjust the on-screen zoom.
+The livestream preview tightens into a close-up of B’s face. B’s expression changes from firm concern to visible shock and discomfort. Hearts, thumbs-up icons, and fictional-glyph comments continue appearing around his image.
+Keep nearby classmates visible around the phone in the main camera’s wider framing. Several students appear embarrassed and alarmed; some lower their heads toward their desks.
+Push closer until B’s face on the smartphone display dominates the frame. Hold its position briefly to prepare the next match cut.
+00:13–00:16 — SCENE 5: THE IMAGE AND CONTACT DETAILS ARE SHARED
+Match-cut from B’s live face to the identical captured frame inside a social-media post displayed on B’s smartphone, now resting on his staff-office desk.
+This is a later moment, after lessons have finished and the students have returned home. The classroom’s established furnishings remain in place across the time transition.
+The social-media post contains the captured image of B and a contact string immediately underneath it: three fictional glyphs, a hyphen, four fictional glyphs, a hyphen, and four fictional glyphs.
+Animate the feed moving through repeated reposts of the same image and contact string. Share arrows and notification symbols communicate rapid circulation. Keep B’s captured face and the contact string consistent across every repost.
+End as an incoming-call overlay appears on this same phone, leading directly into the final scene.
+00:16–00:20 — SCENE 6: CALLS, MESSAGES, AND DISTRESS
+Pull back slightly from the same smartphone to reveal B seated at his staff-office desk. His shoulders are rounded and his head is lowered. His expression communicates exhaustion and distress.
+The smartphone repeatedly vibrates against the desk. Incoming-call screens and stacked message banners appear in rapid succession, using recognizable call and message symbols with fictional-glyph text.
+Move steadily into an extreme close-up of the vibrating phone. Keep B’s bowed posture softly visible in the background until the tighter framing naturally crops it.
+During the final second, apply an editorial fade over the complete image while the phone continues receiving notifications. Reach full black precisely at 00:20.

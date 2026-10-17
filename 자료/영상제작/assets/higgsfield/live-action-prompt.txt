@@ -1,0 +1,80 @@
+Create an original 20-second live-action-style video set in a fictional Korean coeducational high school.
+The overall visual tone should feel like an original Korean TV miniseries / Korean mini-drama, with realistic acting, natural indoor lighting, restrained camera movement, emotionally grounded performances, and contemporary school-drama cinematography.
+Do not imitate any specific existing drama, actor, platform, logo, or copyrighted visual identity.
+Global Rules — Must Be Applied Throughout the Entire Video
+The setting is a fictional coeducational high school in Korea.
+The video should look like an original Korean mini-series, realistic and cinematic.
+Maintain strict continuity across all scenes.
+All classroom objects, student appearances, teacher appearance, and their positions must remain fixed and consistent unless a scene explicitly requires movement.
+Character A and Character B must keep the same face, hairstyle, clothing, body proportions, and accessories in every scene.
+Background students must remain the same individuals in the same positions throughout the classroom scenes.
+Do not randomly add, remove, duplicate, or reposition desks, chairs, bags, students, or classroom props.
+Any text, letters, symbols, numbers, usernames, captions, comments, labels, or interface elements visible in the video must use unreadable fictional language.
+No readable Korean, English, or clearly readable Arabic numerals should appear anywhere on screen.
+Smartphone interfaces must look like fictional original apps, not recognizable real-world social media or livestream platforms.
+The tone should be realistic, tense, and emotionally grounded.
+Camera movement should be subtle and believable: soft handheld movement, slow push-ins, gentle pans, and realistic close-ups.
+No stylized animation, no cartoon look, no fantasy effects.
+
+Character Definitions
+Character A
+A male Korean high-school student seated at his desk. He looks like the same person in every shot. He wears a consistent school uniform and has a natural, realistic appearance.
+Character B
+A male teacher teaching at the blackboard. He looks like the same person in every shot. He wears consistent teacher attire and has a realistic, serious presence.
+
+Timeline / Scene Breakdown
+Scene 1 [0:00–0:03] — Hidden Livestream Under the Desk
+Inside a fictional Korean coeducational high-school classroom during class.
+Character A is seated in his chair at his desk. He secretly holds a smartphone in his left hand below desk level and is filming while livestreaming. His right hand pretends to write notes on the desk, as if he is paying attention in class.
+Show a brief close-up of the smartphone screen under the desk. On the livestream screen, reaction graphics resembling “likes” and “hearts” appear in real time and float upward, but all interface elements must be fictional and unreadable.
+Character B is visible teaching in the background.
+Use a discreet, tense mood with natural classroom lighting and realistic Korean mini-series cinematography.
+Scene 2 [0:03–0:07] — A Raises the Phone and Films the Classroom
+Character A suddenly raises the smartphone high and openly films the entire classroom.
+He slowly moves the phone to capture the room, revealing the faces of the students and the teacher.
+The camera should show that A is deliberately recording the class.
+Other students react with confusion and discomfort, but in a restrained, realistic way.
+Maintain the same classroom layout, same students, and same object positions from Scene 1.
+Scene 3 [0:07–0:10] — The Teacher Notices and Approaches
+Character B is writing on the blackboard during class. The writing on the board must be made of unreadable fictional symbols.
+B notices that A is filming. He stops writing, turns away from the blackboard, and walks toward A’s desk.
+He gestures and speaks to A, telling him to stop filming.
+Do not show readable subtitles.
+The surrounding students remain seated and watch the situation quietly.
+Preserve all classroom continuity and fixed placement of furniture and students.
+Scene 4 [0:10–0:14] — A Films B’s Face in Close-Up
+Instead of stopping, A adjusts the smartphone so the camera points directly at B’s face.
+He records B in a close-up.
+Use an over-the-shoulder shot from behind A, then a tighter close-up of B’s face from the phone-camera perspective.
+B looks uncomfortable, tense, and unsettled.
+Other students are visibly embarrassed and alarmed. Some lower their heads. Some avoid eye contact.
+All students and classroom objects must remain visually consistent and fixed in position.
+Scene 5 [0:14–0:17] — The Captured Image Spreads Online
+After school, when everyone has gone home, show a close-up of a smartphone displaying a fictional social-media-like interface.
+A captured image of B’s face from the livestream is being shared repeatedly across the platform.
+Visually suggest reposting, sharing, and rapid circulation using duplicated image cards and fictional UI elements.
+Below the captured image, show a contact-information-like string in the visual structure of “000-0000-0000”, but do not use real readable digits. Instead, show unreadable fictional glyphs arranged in the same grouped format so it resembles an exposed phone number without displaying actual readable numbers.
+All text and symbols on screen must remain unreadable.
+Scene 6 [0:17–0:20] — Endless Notifications and Fade to Black
+In the teachers’ office after school, Character B sits at a desk with his head lowered.
+His smartphone, placed nearby, continuously receives incoming call alerts and text-message notifications.
+Show the phone repeatedly lighting up and vibrating.
+All notification text, caller information, and message previews must be displayed in unreadable fictional symbols.
+Slowly push in toward the phone in close-up while B remains in the background, emotionally exhausted.
+End with a slow fade to black.
+
+Visual Direction
+Original, realistic Korean mini-series mood
+Live-action look
+Natural acting and subtle facial expressions
+Realistic Korean classroom environment
+Authentic school-drama atmosphere
+Soft indoor daylight mixed with overhead classroom lighting
+Natural skin texture and realistic fabric detail
+Shallow depth of field for emotional close-ups
+Restrained, intimate cinematography
+No exaggerated action styling
+No recognizable platform branding
+No readable text
+No continuity drift
+No identity drift

@@ -1,0 +1,44 @@
+/* Continuous, compact handout. Screen typography is unchanged. */
+@media print {
+ @page {size:A4;margin:10mm 11mm 12mm}
+ body{font:10pt/1.45 "Malgun Gothic",sans-serif;background:#fff}
+ main{padding:0!important;margin:0!important;max-width:none}
+ .view,.view[hidden]{break-before:auto!important;page-break-before:auto!important;margin:0!important;padding:0!important}
+ .hero,.lesson-header{padding:10px 14px!important;margin:12px 0 8px!important;box-shadow:none!important;break-inside:avoid;break-after:avoid}
+ .hero h2{font-size:23pt!important;margin:6px 0!important}.lesson-header h2{font-size:18pt!important;margin:5px 0!important;line-height:1.3}
+ .hero p,.lesson-header .goal{font-size:10pt!important;line-height:1.45!important;margin:4px 0!important}
+ .blocknum,.badge{font-size:8pt!important;padding:3px!important}
+ .content{padding:0!important;border:0!important}
+ .content p,.step p,.callout p,.narrative>p,.media-copy p,.story-records p{font-size:10pt!important;line-height:1.45!important;margin:5px 0 7px!important}
+ h3,.content h3{font-size:12pt!important;line-height:1.35!important;margin:12px 0 5px!important;break-after:avoid}
+ h4,.click-guide h4{font-size:11pt!important;margin:5px 0!important;break-after:avoid}
+ .step{padding:8px 0!important;gap:9px!important;grid-template-columns:30px 1fr;break-inside:auto!important}
+ .step>span{font-size:10pt!important;width:27px;height:27px;line-height:25px;box-shadow:none}
+ .step h3{margin-top:0!important}.step>div{min-width:0}
+ .callout,.advanced,.tutorial,.teacher-comment,.story-intro{padding:9px 12px!important;margin:9px 0!important;break-inside:auto!important}
+ table{font-size:9pt!important;line-height:1.4!important;min-width:0!important}th,td{padding:6px 8px!important}tr{break-inside:avoid}thead{display:table-header-group}
+ .tablewrap,.table-wrap{margin:7px 0!important;overflow:visible!important}
+ figure,.visual-walkthrough,.click-guide{margin:9px 0!important;padding:7px!important;break-inside:auto!important}
+ .click-guide .annotated{width:100%;max-width:145mm!important;margin:0 auto!important;break-inside:avoid}
+ .click-guide .annotated img{width:100%!important;height:auto!important;max-height:none!important}
+ .click-guide figcaption,.visual-walkthrough figcaption,figcaption{padding:5px 0!important;font-size:9pt!important;line-height:1.4!important}
+ .click-guide p{font-size:9pt!important;line-height:1.4!important;margin:4px 0!important}
+ .click-legend{font-size:8pt!important;gap:6px 12px}.click-legend b{width:19px;height:19px;line-height:19px}
+ .visual-walkthrough .zoom{max-width:145mm;margin:auto!important}.visual-walkthrough img{max-height:85mm!important}
+ .imagepair,.history-pictures{display:grid!important;grid-template-columns:1fr 1fr;gap:9px}
+ .imagepair figure,.history-pictures figure{margin:0!important}
+ .lesson-video,.media-feature,.related-media{margin:9px 0!important;padding:5px 0!important;break-inside:auto!important}
+ .media-card,.video-card,.story-records article{break-inside:auto!important;page-break-inside:auto!important;padding:8px!important;margin:8px 0!important;box-shadow:none!important}
+ .media-copy{padding:6px!important}.media-copy h3{min-height:0!important}
+ .reference-card{box-shadow:none!important;break-inside:avoid}.reference-card>div{padding:6px}.reference-card>img{width:55px!important;height:auto!important;max-height:60px}
+ .reference-card h4{font-size:9pt!important}.reference-card p{font-size:8pt!important}.reference-grid{gap:8px}
+ .toolbox-grid{display:block!important;margin:8px 0!important}.toolbox-card{padding:9px!important;margin:7px 0!important;box-shadow:none;break-inside:avoid}.toolbox-card p{min-height:0!important}.toolbox-card h4{margin:3px 0!important}.tool-letter{float:left;width:30px;height:30px;margin:0 10px 6px 0;font-size:18px}
+ .practice-path{margin:10px 0!important;padding-top:7px}.practice-path li{padding:4px 0 8px 38px!important}.practice-path li:before{font-size:9pt;top:5px;padding:2px 4px}
+ .shot-grid{gap:7px;margin:8px 0}.shot-grid article{padding:8px}.shot-grid p,.shot-grid small{font-size:9pt!important}
+ .prompt{margin:8px 0!important;break-inside:auto!important}pre{white-space:pre-wrap;font-size:9pt!important;line-height:1.4!important;padding:9px!important}
+ .home-visuals,.beginner,.stats,.clip-links,.practice-links,.pager,.mission,.notes,.quiz{display:none!important}
+ .downloadgrid a{padding:3px 0!important}.sources{margin:7px 0!important}
+ p{orphans:2;widows:2}
+}
+
+@media print{.click-guide .annotated:has(img[src="assets/s2-p17-i1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/steps/s2-p18-i1.jpg"]){max-width:54.8mm!important}.click-guide .annotated:has(img[src="assets/steps/s2-p21-i1.jpg"]){max-width:83.6mm!important}.click-guide .annotated:has(img[src="assets/s2-p22-i1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/s2-p23-i1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/s2-p24-i1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/s2-p20-i1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/steps/s2-p26-i2.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/s2-p28-i1.jpg"]){max-width:55.8mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-format.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-text-panel.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/s4-p22-i1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-image-tools.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/steps/s4-p22-i1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/magic-home.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/magic-upload.png"]){max-width:142.2mm!important}.click-guide .annotated:has(img[src="assets/click-guide/magic-media.png"]){max-width:68.0mm!important}.click-guide .annotated:has(img[src="assets/click-guide/magic-result.png"]){max-width:126.8mm!important}.click-guide .annotated:has(img[src="assets/click-guide/magic-text.png"]){max-width:137.9mm!important}.click-guide .annotated:has(img[src="assets/click-guide/magic-move.png"]){max-width:125.2mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-image-tools.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-add-scene.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-duration.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-animation-panel.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-captions-empty.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-video-export.png"]){max-width:114.8mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-download.png"]){max-width:83.6mm!important}.click-guide .annotated:has(img[src="assets/click-guide/canva-share-panel.png"]){max-width:86.9mm!important}.click-guide .annotated:has(img[src="assets/click-guide/flow-prompt.png"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/flow-settings.png"]){max-width:47.8mm!important}.click-guide .annotated:has(img[src="assets/click-guide/higgs-input.png"]){max-width:46.8mm!important}.click-guide .annotated:has(img[src="assets/steps/s2-p38-i1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/capcut-official-1.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/capcut-official-2.jpg"]){max-width:145mm!important}.click-guide .annotated:has(img[src="assets/click-guide/capcut-official-3.jpg"]){max-width:145mm!important}.click-guide{break-inside:avoid!important}.click-target i{width:19px;height:19px;font-size:12px;line-height:15px;left:-8px;top:-9px}}

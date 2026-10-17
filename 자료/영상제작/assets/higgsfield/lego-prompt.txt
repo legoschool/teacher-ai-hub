@@ -1,0 +1,33 @@
+Create a continuous 10-second LEGO stop-motion animation set during recess at a school attended by LEGO minifigures.
+
+REFERENCE CONSISTENCY:
+Use the attached character sheet as the exact visual reference for Comz, LM, Dalse, and Mr.lee. Preserve every character’s original face design, head shape, hairstyle, clothing, colors, accessories, LEGO proportions, and surface details throughout the entire video. Animate their bodies through natural LEGO-style head turns, small nods, arm movements, and facial-expression changes.
+
+Use the attached classroom sheet as the exact environment reference. Preserve its spatial depth, furniture arrangement, object placement, camera-facing geometry, composition, colors, and brightness throughout the video. Every classroom object that becomes visible remains present in the same location through the final frame.
+
+The classroom contains exactly four LEGO characters: Comz, LM, Dalse, and their teacher Mr.lee. From Mr.lee’s position at the front of the classroom, the seated students are arranged from left to right as Comz, LM, and Dalse. Comz, LM, and Dalse remain seated at their assigned desks. Mr.lee remains standing in front of the blackboard and participates through attentive reactions.
+
+VISUAL STYLE:
+Authentic LEGO stop-motion animation with tactile plastic textures, clearly stepped frame-by-frame movement, subtle handmade timing, small natural pose changes, consistent scale, and stable warm classroom lighting. The atmosphere feels like a lively school recess while preserving the classroom sheet’s exact brightness and visual structure.
+
+All visible writing, symbols, interface labels, video titles, icons containing text, and numbers appear as consistent fictional glyphs in an invented unreadable language.
+
+Dialogue is expressed visually through gentle rhythmic head nods, small head turns toward the listeners, expressive pauses, and measured LEGO hand gestures. The characters’ mouths retain the designs shown on the character sheet.
+
+TIMELINE:
+
+00:00–00:05 — LM speaks to Dalse and Comz
+Begin from an over-the-shoulder camera position beside Mr.lee at the blackboard, aligned with the teacher’s standing position and line of sight. A small portion of Mr.lee’s shoulder and upper body establishes his presence at the front of the classroom. The camera looks toward the three students in their fixed left-to-right seating order: Comz, LM, Dalse.
+
+LM is the main focus in a medium shot. LM holds a smartphone in one hand and watches a YouTube-style video interface made entirely from fictional unreadable glyphs and abstract thumbnail shapes. LM shows a clearly surprised expression with widened eyes and an alert posture. LM turns slightly toward Dalse and Comz and speaks through two or three gentle rhythmic head nods, a small lift of the smartphone, and a short gesture with the free hand.
+
+Comz and Dalse remain seated and look toward LM with attentive reactions. Mr.lee remains standing at the blackboard, observing the conversation with calm interest. The camera makes a subtle stop-motion push toward LM and then begins a smooth lateral transition toward Dalse during the final second. LM continues holding the smartphone through the transition.
+
+00:05–00:10 — Dalse responds to LM and Comz
+Continue directly from the previous camera movement, preserving the same teacher-side viewpoint, classroom geometry, lighting, seating positions, and visible objects. Settle into a medium shot centered on Dalse while keeping LM and Comz naturally visible within the classroom composition. Mr.lee remains visibly standing at the blackboard, listening to the students.
+
+Dalse holds a smartphone in one hand and watches a YouTube-style video interface composed of the same fictional unreadable glyph system and abstract thumbnail shapes. Dalse’s expression shows clear understanding combined with mild concern: focused eyes, slightly raised inner brows, and a thoughtful head angle. Dalse turns toward LM and Comz and speaks through gentle rhythmic nods, a brief concerned head tilt, a small movement of the smartphone, and one restrained gesture with the free hand.
+
+LM remains seated and continues holding the smartphone introduced in the first scene, now listening to Dalse with an attentive expression. Comz remains seated and follows Dalse with a focused gaze. Mr.lee gives one subtle acknowledging nod from the blackboard area.
+
+End on a balanced teacher-view composition showing Comz, LM, and Dalse in their fixed seating order, both smartphones still present, Mr.lee standing at the blackboard, and every classroom object preserved in its established position. Hold the final pose briefly for a clean transition into the following clip.

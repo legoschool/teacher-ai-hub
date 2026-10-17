@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>따라 하기 · 교사를 위한 AI 디지털 적정 기술</title>
+<style>
+:root{--ink:#172b43;--muted:#526174;--paper:#f4f2e9;--card:#fff;--line:#c6ccd2;--accent:#075bca;--yellow:#ffcd29;
+ font-family:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+@media (prefers-color-scheme:dark){:root{--ink:#e6e9ee;--muted:#a6b0bc;--paper:#14181d;--card:#1d232a;--line:#36404b;color-scheme:dark}}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+header{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 18px;border-bottom:2px solid var(--ink);background:var(--card)}
+header a{color:var(--ink);font-size:13px}
+header h1{margin:0;font-size:17px;flex:1;min-width:200px;word-break:keep-all}
+select{font:inherit;font-size:13px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.bar{height:6px;background:var(--line)}.bar i{display:block;height:100%;background:var(--accent);transition:width .2s}
+main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;padding:18px;max-width:1400px;width:100%;margin:0 auto}
+.shot{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:10px;display:grid;place-items:center;min-height:300px}
+.shot img{max-width:100%;max-height:70vh;border-radius:6px;cursor:zoom-in}
+.side{display:flex;flex-direction:column;gap:14px}
+.now{background:var(--card);border:2px solid var(--ink);border-radius:12px;padding:16px;box-shadow:4px 5px 0 var(--accent)}
+.now .k{font:800 13px ui-monospace,monospace;color:var(--accent)}
+.now h2{margin:6px 0 8px;font-size:21px;word-break:keep-all}
+.now p{margin:0;font-size:15.5px;line-height:1.7;word-break:keep-all}
+.nav{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.nav button{font:inherit;font-weight:800;font-size:15px;padding:12px;border:2px solid var(--ink);border-radius:10px;background:var(--card);color:var(--ink);cursor:pointer;box-shadow:2px 3px 0 var(--ink)}
+.nav button.next{background:var(--yellow);color:#172b43}
+.nav button:disabled{opacity:.4;cursor:default}
+.list{display:flex;flex-direction:column;gap:4px;max-height:42vh;overflow:auto;padding-right:4px}
+.list button{display:flex;gap:8px;align-items:center;text-align:left;font:inherit;font-size:13.5px;padding:7px 9px;border:1.5px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);cursor:pointer}
+.list button b{flex-shrink:0;width:26px;height:22px;display:grid;place-items:center;border-radius:5px;border:1.5px solid var(--muted);font:700 11.5px ui-monospace,monospace}
+.list button.on{border-color:var(--accent);background:var(--card)}.list button.on b{background:var(--accent);border-color:var(--accent);color:#fff}
+.list button.done b{border-color:#13875d;color:#13875d}
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:96vh}dialog img{max-width:96vw;max-height:94vh;border-radius:8px}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+@media (max-width:860px){main{grid-template-columns:1fr;padding:12px}.list{max-height:none}}
+</style>
+</head>
+<body>
+<header><a href="../index.html">← 처음으로</a><h1 id="t"></h1><select id="sel" aria-label="따라 하기 고르기"></select></header>
+<div class="bar"><i id="bar"></i></div>
+<main>
+  <div class="shot"><img id="img" alt=""></div>
+  <div class="side">
+    <div class="now"><div class="k" id="k"></div><h2 id="h"></h2><p id="p"></p></div>
+    <div class="nav"><button id="prev" type="button">← 이전</button><button id="next" class="next" type="button">다음 →</button></div>
+    <div class="list" id="list"></div>
+  </div>
+</main>
+<dialog id="zoom"><img id="zimg" alt=""></dialog>
+<script>
+const DATA = {"tools": {"title": "크롬 · 드라이브 · 에브리씽 설치와 설정", "steps": [{"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os01_설정_시스템정보.png", "title": "내 컴퓨터 확인", "text": "설정 → 시스템 → 정보에서 시스템 종류(64비트)를 봅니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/01_크롬_다운로드_번호.png", "title": "크롬 내려받기", "text": "google.com/chrome 에서 파란 Chrome 다운로드 단추를 누릅니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os07_크롬_다운로드파일.png", "title": "크롬 설치", "text": "내려받은 ChromeSetup.exe 를 눌러 설치합니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os08_크롬_설정.png", "title": "크롬 설정", "text": "모양에서 북마크바를, 언어에서 번역 제안을 켭니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os04_크롬_프로필.png", "title": "학교·개인 계정 나누기", "text": "오른쪽 위 프로필 → 추가. 학교용과 개인용 창이 갈라집니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os05_크롬_탭그룹.png", "title": "탭 그룹", "text": "탭에 색과 이름을 붙여 묶습니다. 그룹 이름을 누르면 접힙니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os13_크롬_QR.png", "title": "주소를 QR로", "text": "주소창 공유 단추 → QR 코드 만들기. 학생에게 주소를 줄 때 씁니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os09_구글_앱런처.png", "title": "구글 앱 런처", "text": "오른쪽 위 점 아홉 개를 누르면 구글 도구가 펼쳐집니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/02_드라이브_다운로드_번호.png", "title": "데스크톱용 드라이브 내려받기", "text": "운영체제에 맞는 단추를 눌러 설치 파일을 받습니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os02_내PC_드라이브.png", "title": "내 PC에 드라이브 붙이기", "text": "설치가 끝나면 내 PC에 Google Drive가 새 드라이브로 붙습니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os03_트레이_드라이브메뉴.png", "title": "드라이브 메뉴", "text": "작업 표시줄 아이콘 → 톱니바퀴 → Drive 폴더 열기."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os10_드라이브_환경설정.png", "title": "스트리밍과 미러링", "text": "내 컴퓨터 칸과 Google Drive 칸에서 동기화 방식을 고릅니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/03_에브리씽_다운로드_번호.png", "title": "에브리씽 내려받기", "text": "voidtools 에서 Everything 1.4.1 64비트 설치 파일을 받습니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os11_에브리씽_폴더색인.png", "title": "드라이브를 색인에 넣기", "text": "옵션 → 폴더 → 추가. 구글 드라이브를 넣어야 검색됩니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os12_에브리씽_제외.png", "title": "쓸모없는 결과 거르기", "text": "제외 탭에 *.lnk;*.tmp;*.url 을 넣습니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/그린화면/os06_에브리씽_검색.png", "title": "파일 이름 검색", "text": "기억나는 낱말만 띄어 써도 바로 찾습니다."}]}, "webapp": {"title": "구글 시트로 웹앱 만들어 배포하기", "steps": [{"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/a030_새_스프레드시트.jpg", "title": "새 시트 만들기", "text": "드라이브에서 새 스프레드시트를 만듭니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a03_확장프로그램.webp", "title": "Apps Script 열기", "text": "시트 메뉴 확장 프로그램 → Apps Script."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a05_프로젝트이름.webp", "title": "프로젝트 이름", "text": "왼쪽 위 이름을 눌러 새 이름을 적습니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a06_코드붙임.webp", "title": "Code.gs 붙이기", "text": "원래 있던 myFunction을 지우고 받은 코드를 붙입니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a08_파일추가.webp", "title": "HTML 파일 추가", "text": "파일 옆 ＋ → HTML."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a09_Index이름.webp", "title": "이름은 Index", "text": "대문자 I로 Index. index, Index.html 은 안 됩니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a14_실행완료.webp", "title": "setup 실행", "text": "함수 칸에서 setup을 고르고 ▷ 실행. 로그에 완료가 뜨면 됩니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a12_승인필요.webp", "title": "권한 검토", "text": "처음 실행할 때 승인 필요 창이 뜹니다. 권한 검토를 누릅니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a13_3_고급.webp", "title": "고급 → 이동", "text": "내가 만든 스크립트라서 뜨는 화면입니다. 고급을 눌러 이동합니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a26_유형선택.webp", "title": "웹 앱으로 배포", "text": "배포 → 새 배포 → 톱니바퀴 → 웹 앱."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a28_배포구성.webp", "title": "실행 사용자와 액세스", "text": "실행 사용자는 「나」, 액세스 권한은 「모든 사용자」."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/a29_배포완료.webp", "title": "주소 복사", "text": "끝이 /exec 인 주소가 학생에게 줄 주소입니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/t01_응답시트.webp", "title": "시트에 저장 확인", "text": "입력한 값이 시트에 쌓이는지 확인합니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/t09_새버전.webp", "title": "고친 뒤 새 버전", "text": "배포 관리 → 연필 → 새 버전. 주소는 그대로입니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/a062_오류_전달.jpg", "title": "오류는 AI에게", "text": "오류 글을 그대로 복사해 AI에게 전달합니다."}]}, "apikey": {"title": "AI 스튜디오에서 API 키 받아 연결하기", "steps": [{"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/b057_AI스튜디오.jpg", "title": "AI 스튜디오 들어가기", "text": "aistudio.google.com 에 개인 구글 계정으로 들어갑니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/b059_GET_API_KEY.jpg", "title": "Get API key", "text": "왼쪽 아래 Get API key 를 누릅니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/b062_키_복사_주의.jpg", "title": "API 키 복사", "text": "만든 API 키를 복사합니다. 다른 사람에게 보여 주지 않습니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/b085_프로젝트설정.jpg", "title": "프로젝트 설정", "text": "Apps Script 왼쪽 톱니바퀴(프로젝트 설정)를 엽니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/b086_스크립트속성_추가.jpg", "title": "스크립트 속성 추가", "text": "아래쪽 스크립트 속성 추가를 누릅니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/b088_GEMINI_API_KEY_저장.jpg", "title": "GEMINI_API_KEY 저장", "text": "속성에 GEMINI_API_KEY, 값에 API 키를 넣고 저장합니다."}, {"img": "자료실/02_웹교안/적정기술_이미지/앱스크립트/b108_키는_코드에_넣지않기.jpg", "title": "API 키는 코드에 넣지 않기", "text": "코드에는 이름만 적고 API 키는 속성에서 읽어 옵니다."}]}, "essay": {"title": "서·논술형 평가 앱 가~바 화면", "steps": [{"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/s04_홈.webp", "title": "가 · 학생 홈", "text": "학생은 과제 목록에서 과제를 고릅니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/s06_답쓰기.webp", "title": "가 · 답 쓰기", "text": "노트북 과제 화면에서 답을 씁니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/t01_응답시트.webp", "title": "가 · 한마디와 점수", "text": "교사는 응답 시트에 한마디와 점수를 적습니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/n02_파일고르기.webp", "title": "나 · 파일 고르기", "text": "글과 함께 사진·파일을 골라 냅니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/n04_드라이브.webp", "title": "나 · 드라이브에 저장", "text": "낸 파일은 교사 드라이브에 쌓입니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/n03_응답링크.webp", "title": "나 · 파일 링크", "text": "응답 시트에 파일 링크가 붙습니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/d03_사진고름.webp", "title": "다 · 공책 사진", "text": "공책을 찍은 사진을 고릅니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/d04_읽은글.webp", "title": "다 · 사진 속 글자", "text": "컴퓨터가 읽어 옮긴 글을 학생이 고칩니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/d05_응답.webp", "title": "다 · 응답 시트", "text": "고친 답과 자동으로 읽은 글이 함께 저장됩니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/r02_펜으로쓰기.webp", "title": "라 · 펜으로 쓰기", "text": "화면 전체를 펜 칸으로 씁니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/r04_읽은글.webp", "title": "라 · 손글씨 읽기", "text": "손글씨를 읽어 글로 옮깁니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/r05_응답.webp", "title": "라 · 응답 시트", "text": "손글씨 그림 링크와 읽은 글이 저장됩니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/m11_녹음중.webp", "title": "마 · 녹음하며 받아쓰기", "text": "말하는 동안 바로 글로 받아씁니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/m13_응답.webp", "title": "마 · 응답 시트", "text": "녹음 링크와 받아쓴 글이 저장됩니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/b05_파일고름.webp", "title": "바 · 녹음 파일 내기", "text": "미리 녹음한 파일을 고릅니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/b07_받아쓰기완료.webp", "title": "바 · 모두 받아쓰기", "text": "교사가 대기 중인 파일을 한꺼번에 받아씁니다."}, {"img": "자료실/02_웹교안/적정기술_앱코드/_가이드북/그림/b08_받아쓴글.webp", "title": "바 · 받아쓴 글", "text": "응답 시트에 받아쓴 글이 채워집니다."}]}};
+const keys = Object.keys(DATA);
+const sel = document.getElementById('sel');
+keys.forEach(k => { const o = document.createElement('option'); o.value = k; o.textContent = DATA[k].title; sel.appendChild(o); });
+let key = keys[0], i = 0;
+const $ = id => document.getElementById(id);
+function seen(k) { try { return JSON.parse(localStorage.getItem('steps-' + k) || '[]'); } catch(e) { return []; } }
+function mark(k, n) { try { const s = new Set(seen(k)); s.add(n); localStorage.setItem('steps-' + k, JSON.stringify([...s])); } catch(e){} }
+function show() {
+  const set = DATA[key], st = set.steps[i];
+  $('t').textContent = set.title; sel.value = key;
+  $('img').src = st.img; $('img').alt = st.title;
+  $('k').textContent = (i + 1) + ' / ' + set.steps.length;
+  $('h').textContent = st.title; $('p').textContent = st.text;
+  $('bar').style.width = ((i + 1) / set.steps.length * 100) + '%';
+  $('prev').disabled = i === 0;
+  $('next').textContent = i === set.steps.length - 1 ? '처음으로 ↺' : '다음 →';
+  mark(key, i);
+  const done = new Set(seen(key)), list = $('list'); list.replaceChildren();
+  set.steps.forEach((s, n) => {
+    const b = document.createElement('button'); b.type = 'button';
+    b.className = (n === i ? 'on ' : '') + (done.has(n) ? 'done' : '');
+    const num = document.createElement('b'); num.textContent = n + 1;
+    b.append(num, document.createTextNode(s.title));
+    b.onclick = () => { i = n; show(); };
+    list.appendChild(b);
+  });
+  const on = list.querySelector('.on');
+  if (on && list.scrollHeight > list.clientHeight) {
+    const top = on.offsetTop - list.offsetTop;
+    if (top < list.scrollTop || top > list.scrollTop + list.clientHeight - on.offsetHeight) list.scrollTop = top - 8;
+  }
+  history.replaceState(null, '', '#' + key + (i ? '-' + (i + 1) : ''));
+}
+function go(d) { const n = DATA[key].steps.length; i = d > 0 && i === n - 1 ? 0 : Math.max(0, Math.min(n - 1, i + d)); show(); }
+$('prev').onclick = () => go(-1); $('next').onclick = () => go(1);
+sel.onchange = () => { key = sel.value; i = 0; show(); };
+document.addEventListener('keydown', e => { if (e.key === 'ArrowRight') go(1); if (e.key === 'ArrowLeft') go(-1); });
+$('img').onclick = () => { $('zimg').src = $('img').src; $('zoom').showModal(); };
+$('zoom').onclick = () => $('zoom').close();
+let sx = null; $('img').addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive: true});
+$('img').addEventListener('touchend', e => { if (sx === null) return; const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1); sx = null; });
+const m = location.hash.slice(1).match(/^([a-z]+)(?:-(\d+))?$/);
+if (m && DATA[m[1]]) { key = m[1]; i = m[2] ? Math.min(DATA[key].steps.length, +m[2]) - 1 : 0; }
+show();
+</script>
+</body>
+</html>

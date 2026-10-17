@@ -1,0 +1,50 @@
+﻿프롬프트 작성과 수정
+빈 교실 창가의 투명 유리병에 작은 새싹이 있다.
+따뜻한 오후 햇빛, 책과 노트가 놓인 책상, 차분한 색감.
+가로 구도이며 오른쪽에 제목을 넣을 여백을 둔다.
+사람, 글자, 로고는 넣지 않는다.
+
+ChatGPT, Gemini로 시나리오 만들기
+너는 교사가 만드는 짧은 교육 영상의 구성 편집자다.
+시청자: 초등학생
+주제: 창가의 새싹을 매일 관찰하고 기록하기
+목표: 같은 자리에서 사진을 찍고 어제와 달라진 점 한 가지를 적게 한다.
+전체 길이: 30초. 장면 6개, 각 5초.
+자료: 새싹 이미지 1장, 노트 이미지 또는 단색 배경.
+촬영하지 않은 성장을 실제 관찰처럼 말하지 않는다.
+시간 / 화면 / 내레이션 / 화면 자막 / 제작 도구 표로 작성해 줘.
+숫자나 연구 결과를 지어내지 말고, 한 장면에는 행동 하나만 넣어 줘.
+
+ChatGPT, Gemini로 시나리오 만들기
+방금 장면표를 검토해 줘.
+총 길이가 30초인지 확인하고, 내레이션을 실제로 읽으면 긴 장면을 표시해 줘.
+추상적인 표현을 눈으로 볼 수 있는 행동으로 바꿔 줘.
+기존 메시지와 장면 수는 유지하고 바꾼 이유를 옆에 적어 줘.
+
+Canva AI 생성 후 요소로 고치기
+초등학생이 볼 새싹 관찰 안내용 가로 디자인을 만들어 줘.
+제목: 어제와 무엇이 달라졌을까?
+안내: 같은 자리에서 사진 찍기 / 달라진 점 한 가지 적기
+사진 자리 하나와 편집 가능한 텍스트 상자로 구성해 줘.
+배경은 밝게, 글자는 짙게. 장식보다 글자 읽기를 우선해 줘.
+
+Google Flow 이미지를 움직이는 장면으로
+Use the provided image as the starting frame.
+Locked-off camera. The small seedling leaves sway very gently in a light breeze.
+Preserve the glass jar, books, notebook, lighting, and room layout.
+No new objects, no people, no text, no logos. One continuous shot.
+If audio is supported, use only quiet room ambience, no speech or music.
+
+Higgsfield 카메라 움직임 비교하기
+Use the supplied classroom seedling image.
+A very slow, subtle camera push-in toward the glass jar.
+Keep the seedling and jar shape stable. Preserve the background and warm daylight.
+No orbit, no sudden zoom, no cuts, no new objects, no text.
+One calm continuous shot for an educational video.
+
+숙련자를 위한 제작 실험
+이 장면표에서 설명과 화면이 맞지 않는 부분을 찾아 줘.
+같은 내용을 반복하는 장면은 합치고, 시청자가 추측해야 하는 정보는 보충해 줘.
+촬영 자료와 AI 생성 장면을 구분해 줘.
+수정 전 / 수정 후 / 바꾼 이유를 표로 작성해 줘.
+근거를 확인할 수 없는 사실은 삭제하지 말고 검토 필요로 표시해 줘.
